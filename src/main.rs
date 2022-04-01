@@ -34,10 +34,7 @@ fn handle_connection(mut stream: TcpStream) {
         ("HTTP/1.1 404 Not Found", "404.html")
     };
 
-    let html_file_path = {
-        let path = Path::new("assets");
-        path.join(filename)
-    };
+    let html_file_path = Path::new("assets").join(filename);
 
     let html_contents = fs::read_to_string(html_file_path).unwrap();
     let response = format!(
