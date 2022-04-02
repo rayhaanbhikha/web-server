@@ -3,5 +3,12 @@
 version = 3
 
 [[package]]
-name = "web-server"
+name = "server"
+version = "0.1.0"
+dependencies = [
+ "thread_pool",
+]
+
+[[package]]
+name = "thread_pool"
 version = "0.1.0"
